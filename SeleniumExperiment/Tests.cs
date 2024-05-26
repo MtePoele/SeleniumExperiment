@@ -1,4 +1,3 @@
-using Microsoft.VisualStudio.TestPlatform.TestHost;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
