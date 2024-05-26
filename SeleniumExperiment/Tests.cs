@@ -20,8 +20,6 @@ namespace SeleniumExperiment
         {
             driver.Navigate().GoToUrl("https://www.pairsoft.com/about-us/");
 
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromMilliseconds(1000);
-
             Assert.Equal("About PairSoft", driver.Title);
 
             driver.Quit();
@@ -32,8 +30,6 @@ namespace SeleniumExperiment
         {
             driver.Navigate().GoToUrl("https://www.pairsoft.com/resources/white-papers/");
             IWebElement becomeAPartnerButton = driver.FindElement(By.ClassName("alt-outline"));
-
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromMilliseconds(1000);
 
             Assert.Equal("Become a Partner", becomeAPartnerButton.Text);
 
