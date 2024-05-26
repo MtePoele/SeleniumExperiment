@@ -6,7 +6,7 @@ namespace SeleniumExperiment
 {
     public class Tests
     {
-        ChromeDriver driver = new();
+        IWebDriver driver;
 
         public Tests()
         {
@@ -23,6 +23,8 @@ namespace SeleniumExperiment
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromMilliseconds(500);
 
             Assert.Equal("About PairSoft", driver.Title);
+
+            driver.Quit();
         }
 
         [Fact]
@@ -36,6 +38,8 @@ namespace SeleniumExperiment
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromMilliseconds(500);
 
             Assert.Equal("Become a Partner", becomeAPartnerButton.Text);
+
+            driver.Quit();
         }
     }
 }
