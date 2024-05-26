@@ -6,7 +6,10 @@ namespace SeleniumExperiment
 {
     public class Tests
     {
-        IWebDriver driver;
+        // Suppressed warning here. Making it a concrete type has test explorer opening blank Chrome windows.
+#pragma warning disable CA1859 // Use concrete types when possible for improved performance
+        readonly IWebDriver driver;
+#pragma warning restore CA1859 // Use concrete types when possible for improved performance
 
         public Tests()
         {
